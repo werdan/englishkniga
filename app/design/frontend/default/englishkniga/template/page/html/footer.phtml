@@ -27,30 +27,19 @@
 <div class="footer-container">
 	<div class="footer">
 		<div class="footer-block">
-			<div class="wrapper">
-				<div class="footer-col1">
-					<?php echo $this->getChildHtml('left.newsletter') ?>
-				</div>
-				<div class="footer-col2">
-					<?php echo $this->getChildHtml('footer-block1') ?>
-				</div>
-				<div class="footer-col3">
-					<?php echo $this->getChildHtml('footer-block2') ?>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<div class="footer-links">
-				<?php echo $this->getChildHtml('cms_footer_links') ?>
-				<?php echo $this->getChildHtml('footer_links') ?>
-			</div>
-			<div class="fright">
-				<?php echo $this->getChildHtml('currency') ?>
-				<?php echo $this->getChildHtml('store_switcher') ?>
-			</div>
-		</div>
+            <div class="wrapper">
+                <span>Сайт разработан <a href="http://go-up.com.ua" title="Go Up">GoUp</a>, 2012</span>
+                <div class="footer-links">
+                    <?php //echo $this->getChildHtml('cms_footer_links') ?>
+                    <?php echo $this->getChildHtml('footer_links') ?>
+                </div>
+                <div class="fright">
+                    <?php echo $this->getChildHtml('currency') ?>
+                    <?php echo $this->getChildHtml('store_switcher') ?>
+                </div>
+            </div>
+        </div>
 		<address><?php echo $this->getCopyright() ?></address>
-		More <a rel="nofollow" href="http://www.templatemonster.com/category/book-store-magento-themes/" target="_blank">Book Store Magento Themes</a> at TemplateMonster.com
    </div>
 </div>
 

@@ -31,77 +31,7 @@
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
 <link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
-<!--[if lt IE 7]>
-<script type="text/javascript">
-//<![CDATA[
-    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
-    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
-//]]>
-</script>
-<![endif]-->
 <?php echo $this->getCssJsHtml() ?>
 <?php echo $this->getChildHtml() ?>
-<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php //echo $this->helper('core/js')->getTranslatorScript() ?>
 <?php echo $this->getIncludes() ?>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('') ?>script/jquery-1.4.2.js"></script> 
-
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('') ?>script/jquery.anythingslider.js"></script> 
-
-<script type="text/javascript">
-function formatText(index, panel) {
-  return index + "";
- }
-
-  $(function () {
-        var j = jQuery.noConflict();
-		j('.anythingSlider').anythingSlider({
-			 easing: "swing",                // Anything other than "linear" or "swing" requires the easing plugin
-			 autoPlay: true,                 // This turns off the entire FUNCTIONALY, not just if it starts running or not.
-			 delay: 7000,                    // How long between slide transitions in AutoPlay mode
-			 startStopped: false,            // If autoPlay is on, this can force it to start stopped
-			 animationTime: 1000,             // How long the slide transition takes
-			 hashTags: true,                 // Should links change the hashtag in the URL?
-			 buildNavigation: true,         // If true, builds and list of anchor links to link to each slide
-			 pauseOnHover: true,             // If true, and autoPlay is enabled, the show will pause on hover
-			 startText: "Play",              // Start text
-			 stopText: "Stop",               // Stop text
-		  navigationFormatter: formatText   // Details at the top of the file on this use (advanced use)
-		});
-
-		j("#slide-jump").click(function(){
-			 j('.anythingSlider').anythingSlider(6);
-		});
-
-  });
-</script>
-
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('') ?>script/slider.js"></script>
-
-<script type="text/javascript">
-	jQuery.noConflict();
-	jQuery(window).bind('load', function(){
-		jQuery().prepare_slider();
-		jQuery('#slider_list > li').over();
-		//=======intro (auto slider for all images)================
-		var slider_link = jQuery('.slider .box-right a');
-		var slider_link_index = 1;
-		var slider_count = jQuery('#slider_list > li').size();	
-
-		function slider_intro(){
-			if(slider_link_index <= slider_count){
-				slider_link.trigger('click');
-				slider_link_index++;
-				setTimeout(function(){slider_intro()}, 7000); //select change time
-			}
-		}
-		setTimeout(function(){slider_intro()}, 7000)
-	  //========//intro=======
-	});
-</script>
-
-
-<!--[if lt IE 7]>
-    <div style=' clear: both; text-align:center; position: relative;'>
-        <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
-    </div>
-<![endif]--> 

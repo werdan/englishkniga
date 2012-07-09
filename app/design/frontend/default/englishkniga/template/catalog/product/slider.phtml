@@ -1,0 +1,17 @@
+<?php if (($_products = $this->getProductCollection()) && $_products->getSize()): ?>
+    <div class="slider">
+        <div class="box-left"><a id="left_but">&nbsp;</a></div>
+        <div class="box-top">
+            <ul id="slider_list">
+                <?php foreach ($_products->getItems() as $_product) : ?>
+                    <li>
+                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>">
+                            <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(300, null) ?>" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <div class="box-right"><a id="right_but">&nbsp;</a></div>
+    </div>
+<?php endif; ?>

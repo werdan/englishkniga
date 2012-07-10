@@ -29,10 +29,8 @@
 
 <div class="wrapper">
 <?php echo $this->getPriceHtml($_product) ?>
-<?php if ($_product->isAvailable()): ?>
-    <p class="availability in-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('In stock') ?></span></p>
-<?php else: ?>
-    <p class="availability out-of-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('Out of stock') ?></span></p>
-<?php endif; ?>
+<?php $_helper = $this->helper('catalog/output'); ?>
+<a href="<?php echo $_helper->productAttribute($_product, $_product->getAmazon_url(), 'amazon_url'); ?>" target="_blank" class="amazon-link"><?php echo $this->__("Buy on Amazon"); ?></a>
+<?php //Previous availability message was here, check GIT history ?>
 <?php echo $this->getChildHtml('product_type_data_extra') ?>
 </div>

@@ -221,8 +221,8 @@ Product view
                 <block type="catalog/product_view_attributes" name="product.attributes" as="additional" template="catalog/product/view/attributes.phtml">
                     <action method="addToParentGroup"><group>detailed_info</group></action>
                 </block>
-                <block type="catalog/product_view" name="product.info.addto" as="addto" template="catalog/product/view/addto.phtml"/>
-                <block type="catalog/product_view" name="product.info.addtocart" as="addtocart" template="catalog/product/view/addtocart.phtml"/>
+                <!--block type="catalog/product_view" name="product.info.addto" as="addto" template="catalog/product/view/addto.phtml"/>
+                <block type="catalog/product_view" name="product.info.addtocart" as="addtocart" template="catalog/product/view/addtocart.phtml"/-->
 
                 <block type="core/text_list" name="product.info.extrahint" as="extrahint" translate="label">
                     <label>Product View Extra Hint</label>
@@ -275,11 +275,6 @@ Product view
             </block>
 			<block type="catalog/product_compare_sidebar" after="cart_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
 			<block type="reports/product_viewed" after="catalog.compare.sidebar" name="right.reports.product.viewed" template="reports/product_viewed.phtml" />
-			<block type="tag/popular" name="tags_popular" after="right.reports.product.viewed" template="tag/popular.phtml"/>
-			<block type="poll/activePoll" name="right.poll" after="tags_popular">
-                <action method="setPollTemplate"><template>poll/active.phtml</template><type>poll</type></action>
-                <action method="setPollTemplate"><template>poll/result.phtml</template><type>results</type></action>
-            </block>
         </reference>
     </catalog_product_view>
 

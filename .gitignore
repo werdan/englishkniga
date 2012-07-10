@@ -1,6 +1,8 @@
 var
-media/catalog
+media/catalog/product/cache
 media/css
+media/css_secure
+media/tmp
 media/js
 .idea
 app/etc/local.xml

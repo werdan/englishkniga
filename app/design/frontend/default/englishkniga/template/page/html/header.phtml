@@ -31,6 +31,7 @@
     <div class="header">
         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <div class="quick-access">
+            <?php echo $this->getChildHtml('topLinks') ?>
 			<?php echo $this->getChildHtml('topSearch') ?>
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>

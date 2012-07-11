@@ -54,10 +54,18 @@ class Mage_Catalog_Block_Product_View extends Mage_Catalog_Block_Product_Abstrac
         if ($headBlock) {
             $product = $this->getProduct();
 
-            $title = $product->getName() . " | " . $product->getCategory()->getMetaTitle();
+            if ($product->getCategory() && !$product->getMetaTitle()) {
+                $title = $product->getName() . " | " . $product->getCategory()->getMetaTitle();
+            }  else {
+                $title = $product->getName() . " | " . $product->getMetaTitle();
+            }
 
             $headBlock->setTitle($title);
-            $headBlock->setKeywords($product->getCategory()->getMetaKeywords());
+            if ($product->getCategory() && !$product->getMetaKeywords()) {
+                $headBlock->setKeywords($product->getCategory()->getMetaKeywords());
+            } else {
+                $headBlock->setKeywords($product->getMetaKeywords());
+            }
 
             $description = $product->getName() . " - " . $product->getMetaDescription();
             if ($product->getMetaDescription()) {

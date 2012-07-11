@@ -49,7 +49,7 @@ Default layout, loads most of the pages
     <default>
         <!-- Mage_Customer -->
         <reference name="top.links">
-            <action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>10</position></action>
+            <action method="addLink" translate="label title" module="customer"><label>How to buy on Amazon</label><url>kak-pokupat-na-amazon.html</url><title>My Account</title><prepare/><urlParams/><position>10</position></action>
         </reference>
     </default>
 
@@ -72,7 +72,7 @@ Load this update on every page when customer is logged out
             <block type="customer/form_login" name="customer_form_mini_login" before="-" template="customer/form/mini.login.phtml"/>
         </reference>-->
         <reference name="top.links">
-            <action method="addLink" translate="label title" module="customer"><label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title><prepare/><urlParams/><position>100</position></action>
+            <!-- <action method="addLink" translate="label title" module="customer"><label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title><prepare/><urlParams/><position>100</position></action> -->
         </reference>
         <remove name="wishlist_sidebar"></remove>
         <remove name="reorder"></remove>

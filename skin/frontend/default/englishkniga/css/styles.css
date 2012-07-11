@@ -1476,7 +1476,7 @@ td.cart-buttons .btn-continue{ float:left;}
 .my-account .data-table { margin-bottom:10px;}
 .multiple-checkout .grand-total big { display:block; padding:5px 0 7px 0;}
 
-.std p { padding:0 0 10px 0;}
+.std p { padding:0 0 10px 0; font-size:20px; line-height: 20px; text-align: justify;}
 .product-image-popup .nav { padding:7px 0 7px 0; }
 
 .advanced-search-summary{padding:15px 0;}

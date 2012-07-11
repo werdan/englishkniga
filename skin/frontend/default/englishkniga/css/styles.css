@@ -868,7 +868,7 @@ tr.summary-details-excluded { font-style:italic; }
 .col3-layout .product-view .product-img-box { float:none; margin:0 auto; }
 .product-view .product-img-box .product-image {  }
 .product-view .product-img-box .product-image-zoom { position:relative; width:400px; height:400px; overflow:hidden; z-index:9; }
-.product-view .product-img-box .product-image-zoom img { position:absolute; left:0; top:0; cursor:move; }
+.product-view .product-img-box .product-image-zoom img { position:absolute; left:0; top:0; }
 .product-view .product-img-box .zoom-notice { font-size:11px; padding-bottom:15px; }
 .product-view .product-img-box .zoom { position:relative; z-index:9; height:18px; margin:0 auto 23px; padding:0 28px; cursor:pointer; }
 .product-view .product-img-box .zoom.disabled { -moz-opacity:.3; -webkit-opacity:.3; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";/*IE8*/ opacity:.3; }

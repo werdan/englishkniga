@@ -145,6 +145,13 @@
     RewriteRule .* - [L,R=405]
 
 ############################################
+## Redirect for home page
+
+    RewriteCond %{REQUEST_URI} /home$
+    RewriteRule .* http://englishkniga.com/ [L,R=301]
+
+
+############################################
 ## redirect for mobile user agents
 
     #RewriteCond %{REQUEST_URI} !^/mobiledirectoryhere/.*$
